@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sex on the Beach | El Arte de la Coctelería Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark-bg: #0a0a0a;
+            --text-light: #f4f4f4;
+            --accent-red: #8b0000;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+
+        /* Section Styling */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+            margin: 20px auto;
+        }
+
+        /* Historia */
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .history-text {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* Ficha Técnica */
+        .tech-sheet {
+            background: #151515;
+            padding: 40px;
+            border: 1px solid #333;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .tech-item h3 {
+            color: var(--gold);
+            margin-bottom: 10px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .tech-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tech-item li {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Galería */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid var(--gold);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #050505;
+            color: var(--gold);
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .history-grid, .tech-sheet {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <p>THE ART OF MIXOLOGY</p>
+        <h1>Sex on the Beach</h1>
+        <p>Un atardecer eterno en cada sorbo</p>
+    </section>
+
+    <div class="container">
+        <!-- Historia -->
+        <section id="historia">
+            <h2 class="section-title">Crónica de un Clásico</h2>
+            <div class="history-grid">
+                <div class="history-text">
+                    <p>Corría el año 1987 en Ft. Lauderdale, Florida. Durante el auge del <em>Spring Break</em>, un joven bartender llamado <strong>Ted Pizio</strong> en el "Confetti’s Bar" fusionó los sabores tropicales que definían la época.</p>
+                    <p>Al ser consultado sobre el nombre de esta mezcla vibrante de vodka y durazno, Pizio pensó en las dos razones principales por las que los turistas visitaban Florida: <strong>"The Beach"</strong> y <strong>"Sex"</strong>. Así nació una leyenda que personifica la libertad, el sol y la sofisticación relajada.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bartender preparando cóctel" style="width:100%; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Ficha Técnica -->
+        <section id="ficha">
+            <h2 class="section-title">Ficha Técnica</h2>
+            <div class="tech-sheet">
+                <div class="tech-item">
+                    <h3>Ingredientes Premium</h3>
+                    <ul>
+                        <li><span>45 ml Vodka Premium</span> </li>
+                        <li><span>25 ml Licor de Durazno</span></li>
+                        <li><span>45 ml Jugo de Naranja Natural</span></li>
+                        <li><span>45 ml Jugo de Arándanos (Cranberry)</span></li>
+                    </ul>
+                </div>
+                <div class="tech-item">
+                    <h3>Detalles de Servicio</h3>
+                    <ul>
+                        <li><strong>Cristalería: </strong> Vaso Highball o Hurricane</li>
+                        <li><strong>Método: </strong> Directo o Shakeado suave</li>
+                        <li><strong>Garnish: </strong> Rodaja de naranja y cereza marrasquino</li>
+                        <li><strong>Temperatura: </strong> Muy frío con hielo en cubos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Galería -->
+        <section id="galeria">
+            <h2 class="section-title">Visualización</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cóctel close up">
+                <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bar de lujo">
+                <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Preparación">
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        Todos los derechos reservados a la Brigada Número 4
+    </footer>
+
+</body>
+</html>
