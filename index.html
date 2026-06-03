@@ -28,11 +28,11 @@
             letter-spacing: 2px;
         }
 
+        /* --- HERO OPTIMIZADO --- */
         .hero {
             position: relative;
             height: 100vh; 
             height: 100dvh; 
-            min-height: -webkit-fill-available; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -53,8 +53,6 @@
                         url('https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1500&q=80');
             background-size: cover;
             background-position: center center;
-            will-change: transform;
-            transform: translateZ(0);
         }
 
         .hero h1 {
@@ -91,6 +89,21 @@
             margin: 20px auto;
         }
 
+        /* --- HISTORIA --- */
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .history-text {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* --- FICHAS TÉCNICAS --- */
         .tech-sheet-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -133,6 +146,26 @@
             padding-bottom: 4px;
         }
 
+        /* --- GALERÍA --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid var(--gold);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+
         footer {
             text-align: center;
             padding: 40px;
@@ -151,7 +184,7 @@
         }
 
         @media (max-width: 900px) {
-            .tech-sheet-wrapper { grid-template-columns: 1fr; }
+            .tech-sheet-wrapper, .history-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -165,6 +198,23 @@
     </section>
 
     <div class="container">
+        <!-- SECCIÓN HISTORIA -->
+        <section id="historia">
+            <h2 class="section-title">Crónica de un Clásico</h2>
+            <div class="history-grid">
+                <div class="history-text">
+                    <p>Corría el año 1987 en Ft. Lauderdale, Florida. Durante el auge del <em>Spring Break</em>, un joven bartender llamado <strong>Ted Pizio</strong> en el "Confetti’s Bar" fusionó los sabores tropicales que definían la época.</p>
+                    <p>Al ser consultado sobre el nombre de esta mezcla vibrante de vodka y durazno, Pizio pensó en las dos razones principales por las que los turistas visitaban Florida: <strong>"The Beach"</strong> y <strong>"Sex"</strong>. Así nació una leyenda que personifica la libertad, el sol y la sofisticación relajada.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80" alt="Bartender preparando cóctel" style="width:100%; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- SECCIÓN RECETAS -->
         <div class="tech-sheet-wrapper">
             <!-- Sex on the Beach (Con Alcohol) -->
             <section class="tech-sheet">
@@ -213,6 +263,16 @@
         </div>
 
         <hr>
+
+        <!-- SECCIÓN GALERÍA -->
+        <section id="galeria">
+            <h2 class="section-title">Visualización</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Cóctel close up">
+                <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=800&q=80" alt="Bar de lujo">
+                <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80" alt="Preparación">
+            </div>
+        </section>
     </div>
 
     <footer>
