@@ -28,7 +28,7 @@
             letter-spacing: 2px;
         }
 
-        /* --- HERO OPTIMIZADO --- */
+        /* --- HERO --- */
         .hero {
             position: relative;
             height: 100vh; 
@@ -146,6 +146,42 @@
             padding-bottom: 4px;
         }
 
+        /* --- PROCEDIMIENTO --- */
+        .prep-methods {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .method-card {
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+            padding: 30px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .method-card h3 {
+            color: var(--gold);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .method-card ol {
+            padding-left: 20px;
+        }
+
+        .method-card li {
+            margin-bottom: 12px;
+        }
+
+        .grenadine-note {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
         /* --- GALERÍA --- */
         .gallery {
             display: grid;
@@ -184,7 +220,7 @@
         }
 
         @media (max-width: 900px) {
-            .tech-sheet-wrapper, .history-grid { grid-template-columns: 1fr; }
+            .tech-sheet-wrapper, .history-grid, .prep-methods { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -216,7 +252,6 @@
 
         <!-- SECCIÓN RECETAS -->
         <div class="tech-sheet-wrapper">
-            <!-- Sex on the Beach (Con Alcohol) -->
             <section class="tech-sheet">
                 <h2>Sex on the Beach</h2>
                 <div class="tech-item">
@@ -224,7 +259,7 @@
                     <ul>
                         <li><span>Vodka</span> <span>45 ml</span></li>
                         <li><span>Licor de Durazno</span> <span>25 ml</span></li>
-                        <li><span>Jugo de Naranja Natural</span> <span>45 ml</span></li>
+                        <li><span>Jugo de Naranja</span> <span>45 ml</span></li>
                         <li><span>Granadina</span> <span>45 ml</span></li>
                     </ul>
                 </div>
@@ -239,14 +274,13 @@
                 </div>
             </section>
 
-            <!-- Safe Sex on the Beach (Sin Alcohol) -->
             <section class="tech-sheet">
                 <h2>Safe Sex on the Beach</h2>
                 <div class="tech-item">
                     <h3>Ingredientes</h3>
                     <ul>
-                        <li><span>Zumo de Naranja</span> <span>100 ml</span></li>
-                        <li><span>Zumo de Melocotón</span> <span>100 ml</span></li>
+                        <li><span>Jugo de Naranja</span> <span>100 ml</span></li>
+                        <li><span>Jugo de Melocotón</span> <span>150 ml</span></li>
                         <li><span>Granadina</span> <span>30 ml</span></li>
                     </ul>
                 </div>
@@ -261,6 +295,34 @@
                 </div>
             </section>
         </div>
+
+        <!-- NUEVA SECCIÓN: PROCEDIMIENTO -->
+        <section id="procedimiento">
+            <h2 class="section-title">El Arte de la Preparación</h2>
+            <div class="prep-methods">
+                <!-- Método Directo -->
+                <article class="method-card">
+                    <h3>Método Directo (Construido)</h3>
+                    <ol>
+                        <li>Llenar el vaso Highball con abundante hielo cristalino.</li>
+                        <li>Verter el Vodka y el Licor de Durazno (o jugo de melocotón en la versión Safe).</li>
+                        <li>Añadir el jugo de naranja dejando un pequeño espacio en el borde.</li>
+                        <li><span class="grenadine-note">El toque final:</span> Verter la <strong>granadina</strong> lentamente sobre el dorso de una cuchara de bar. Por su densidad, bajará al fondo creando el efecto degradado.</li>
+                    </ol>
+                </article>
+
+                <!-- Método Shaker -->
+                <article class="method-card">
+                    <h3>Método Shaker (Batido)</h3>
+                    <ol>
+                        <li>En una coctelera con hielo, añadir el vodka, licor de durazno y jugo de naranja.</li>
+                        <li>Batir enérgicamente durante 10-15 segundos hasta que la coctelera esté fría al tacto.</li>
+                        <li>Colar la mezcla en un vaso Highball con hielo fresco.</li>
+                        <li><span class="grenadine-note">Finalización:</span> Añadir la <strong>granadina</strong> directamente al centro del vaso sin mezclar para que se asiente suavemente en la base.</li>
+                    </ol>
+                </article>
+            </div>
+        </section>
 
         <hr>
 
