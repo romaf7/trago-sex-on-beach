@@ -13,14 +13,13 @@
             --accent-red: #8b0000;
         }
 
-        body, html {
+        body {
             margin: 0;
             padding: 0;
-            background-color: var(--dark-bg);
-            color: var(--soft-white);
             font-family: 'Lato', sans-serif;
-            overflow-x: hidden;
-            height: 100%;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
         }
 
         h1, h2, h3 {
@@ -29,46 +28,35 @@
         }
 
         /* Hero Section */
-      .hero {
-            position: relative;
-            height: 100vh; /* Fallback */
-            height: 100dvh;
+       .hero {
+            height: 100vh; 
+            height: 100dvh; 
+            min-height: -webkit-fill-available; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: scroll; 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1500&q=80');
-            background-size: cover;
-            background-position: center;
-            transform: translateZ(0);
+            border-bottom: 1px solid var(--gold);
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            color: var(--gold);
+            font-size: 4rem;
+            margin-bottom: 10px;
             text-transform: uppercase;
-            margin: 0;
-            letter-spacing: 5px;
         }
 
         .hero p {
             font-style: italic;
-            font-size: clamp(1rem, 4vw, 1.3rem);
-            margin-top: 10px;
+            font-size: 1.2rem;
+            color: var(--gold);
         }
+
         /* Section Styling */
         .container {
             max-width: 1000px;
