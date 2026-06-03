@@ -28,7 +28,6 @@
             letter-spacing: 2px;
         }
 
-        /* --- MEJORA CONTRA EL POP MÓVIL --- */
         .hero {
             position: relative;
             height: 100vh; 
@@ -56,7 +55,6 @@
             background-position: center center;
             will-change: transform;
             transform: translateZ(0);
-            -webkit-transform: translateZ(0);
         }
 
         .hero h1 {
@@ -93,21 +91,6 @@
             margin: 20px auto;
         }
 
-        /* Historia */
-        .history-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-
-        .history-text {
-            font-size: 1.1rem;
-            text-align: justify;
-        }
-
-        /* Ficha Técnica */
         .tech-sheet-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -150,25 +133,6 @@
             padding-bottom: 4px;
         }
 
-        /* Galería */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border: 1px solid var(--gold);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.02);
-        }
-
         footer {
             text-align: center;
             padding: 40px;
@@ -188,7 +152,6 @@
 
         @media (max-width: 900px) {
             .tech-sheet-wrapper { grid-template-columns: 1fr; }
-            .history-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -202,27 +165,10 @@
     </section>
 
     <div class="container">
-        <!-- Historia -->
-        <section id="historia">
-            <h2 class="section-title">Crónica de un Clásico</h2>
-            <div class="history-grid">
-                <div class="history-text">
-                    <p>Corría el año 1987 en Ft. Lauderdale, Florida. Durante el auge del <em>Spring Break</em>, un joven bartender llamado <strong>Ted Pizio</strong> en el "Confetti’s Bar" fusionó los sabores tropicales que definían la época.</p>
-                    <p>Al ser consultado sobre el nombre de esta mezcla vibrante de vodka y durazno, Pizio pensó en las dos razones principales por las que los turistas visitaban Florida: <strong>"The Beach"</strong> y <strong>"Sex"</strong>. Así nació una leyenda que personifica la libertad, el sol y la sofisticación relajada.</p>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bartender preparando cóctel" style="width:100%; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                </div>
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- Recetas -->
         <div class="tech-sheet-wrapper">
-            <!-- Ficha Técnica ORIGINAL (Con Granadina) -->
+            <!-- Sex on the Beach (Con Alcohol) -->
             <section class="tech-sheet">
-                <h2>Receta con Alcohol</h2>
+                <h2>Sex on the Beach</h2>
                 <div class="tech-item">
                     <h3>Ingredientes</h3>
                     <ul>
@@ -243,7 +189,7 @@
                 </div>
             </section>
 
-            <!-- Ficha Técnica SIN ALCOHOL (Ajustada) -->
+            <!-- Safe Sex on the Beach (Sin Alcohol) -->
             <section class="tech-sheet">
                 <h2>Safe Sex on the Beach</h2>
                 <div class="tech-item">
@@ -257,26 +203,16 @@
                 <div class="tech-item">
                     <h3>Detalles de Servicio</h3>
                     <ul>
-                        <li><strong>Nombre Alternativo:</strong> Sexo seguro en la playa</li>
-                        <li><strong>Hielo:</strong> Abundante</li>
-                        <li><strong>Perfil:</strong> Predominantemente sedoso y dulce</li>
-                        <li><strong>Nota:</strong> Mayor intensidad de melocotón</li>
+                        <li><strong>Cristalería:</strong> Vaso Highball o Hurricane</li>
+                        <li><strong>Método:</strong> Directo o Shakeado suave</li>
+                        <li><strong>Garnish:</strong> Rodaja de naranja y cereza</li>
+                        <li><strong>Hielo:</strong> Cubos cristalinos</li>
                     </ul>
                 </div>
             </section>
         </div>
 
         <hr>
-
-        <!-- Galería -->
-        <section id="galeria">
-            <h2 class="section-title">Visualización</h2>
-            <div class="gallery">
-                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cóctel close up">
-                <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bar de lujo">
-                <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Preparación">
-            </div>
-        </section>
     </div>
 
     <footer>
