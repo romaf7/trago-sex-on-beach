@@ -20,6 +20,7 @@
             background-color: var(--dark-bg);
             color: var(--text-light);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         h1, h2, h3 {
@@ -27,22 +28,37 @@
             letter-spacing: 2px;
         }
 
-        /* Hero Section */
-       .hero {
+        /* --- MEJORA CONTRA EL POP MÓVIL --- */
+        .hero {
+            position: relative;
             height: 100vh; 
             height: 100dvh; 
             min-height: -webkit-fill-available; 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1500&q=80');
-            background-size: cover;
-            background-position: center center;
-            background-attachment: scroll; 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             border-bottom: 1px solid var(--gold);
+            overflow: hidden;
+        }
+
+        /* Capa de fondo desacoplada para evitar saltos de redimensionado */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center center;
+            /* Forzar procesamiento por hardware/GPU */
+            will-change: transform;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
         }
 
         .hero h1 {
@@ -168,13 +184,13 @@
 <body>
 
     <section class="hero">
+        <div class="hero-bg"></div>
         <p>THE ART OF MIXOLOGY</p>
         <h1>Sex on the Beach</h1>
         <p>Un atardecer eterno en cada sorbo</p>
     </section>
 
     <div class="container">
-        <!-- Historia -->
         <section id="historia">
             <h2 class="section-title">Crónica de un Clásico</h2>
             <div class="history-grid">
@@ -190,7 +206,6 @@
 
         <hr>
 
-        <!-- Ficha Técnica -->
         <section id="ficha">
             <h2 class="section-title">Ficha Técnica</h2>
             <div class="tech-sheet">
@@ -217,7 +232,6 @@
 
         <hr>
 
-        <!-- Galería -->
         <section id="galeria">
             <h2 class="section-title">Visualización</h2>
             <div class="gallery">
